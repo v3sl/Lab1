@@ -1,4 +1,3 @@
-// лаба 1 пример 4 
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -7,13 +6,10 @@ int main() {
 	n = 1; xn = 1000;
 	answer2 = 0;
 	cin >> k >> x;
-	while (true) {
+	while (abs(xn) > 1 / pow(10, k)) {
 		xn = pow(x, n) / (-n);
-		answer2 += xn; // answer2 = answer2 + xn;
+		answer2 += xn;
 		n += 1;
-		if (abs(xn) <= 1 / pow(10, k)) {
-			break;
-		}
 	}
 	answer1 = log(1 - x);
 	cout << answer1 << '\n';
